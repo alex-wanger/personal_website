@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Menu,
   X,
-  Mail,
-  ExternalLink,
+ 
+  
   ArrowRight,
 } from "lucide-react";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,26 +19,26 @@ export default function Portfolio() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      desc: "Full-stack marketplace with payment integration",
-      tags: ["React", "Node.js", "MongoDB"],
-      link: "#",
-    },
-    {
-      title: "Task Management App",
-      desc: "Collaborative workspace for teams",
-      tags: ["React", "Firebase", "Tailwind"],
-      link: "#",
-    },
-    {
-      title: "Weather Dashboard",
-      desc: "Real-time weather with location services",
-      tags: ["API", "React", "D3.js"],
-      link: "#",
-    },
-  ];
+  // const projects = [
+  //   {
+  //     title: "E-Commerce Platform",
+  //     desc: "Full-stack marketplace with payment integration",
+  //     tags: ["React", "Node.js", "MongoDB"],
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "Task Management App",
+  //     desc: "Collaborative workspace for teams",
+  //     tags: ["React", "Firebase", "Tailwind"],
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "Weather Dashboard",
+  //     desc: "Real-time weather with location services",
+  //     tags: ["API", "React", "D3.js"],
+  //     link: "#",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
